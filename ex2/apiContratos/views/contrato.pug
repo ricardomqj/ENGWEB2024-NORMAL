@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Detalhes do Contrato
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+  body
+    .container
+      h1 Detalhes do Contrato
+      ul
+        li ID Contrato: #{contrato.idcontrato}
+        li Objeto do Contrato: #{contrato.objectoContrato}
+        li Data de Publicação: #{contrato.dataPublicacao}
+        li Data de Celebração: #{contrato.dataCelebracaoContrato}
+        li Preço Contratual: #{contrato.precoContratual}
+        li Prazo de Execução: #{contrato.prazoExecucao}
+        li NIPC Entidade Comunicante: #{contrato.NIPC_entidade_comunicante}
+        li Entidade Comunicante: #{contrato.entidade_comunicante}
+        li Fundamentação: #{contrato.fundamentacao}
+

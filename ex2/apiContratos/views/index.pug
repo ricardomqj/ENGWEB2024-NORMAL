@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title Contratos Públicos
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+  body
+    .container
+      h1 Lista de Contratos Públicos
+      table.table.table-striped
+        thead
+          tr
+            th ID Contrato
+            th Objeto do Contrato
+            th Data de Celebração
+            th Preço Contratual
+            th NIPC Entidade Comunicante
+            th Entidade Comunicante
+        tbody
+          each contrato in contratos
+            tr
+              td: a(href=`/${contrato.idcontrato}`) #{contrato.idcontrato}
+              td #{contrato.objectoContrato}
+              td #{contrato.dataCelebracaoContrato}
+              td #{contrato.precoContratual}
+              td: a(href=`/?nipc=${contrato.NIPC_entidade_comunicante}`) #{contrato.NIPC_entidade_comunicante}
+              td #{contrato.entidade_comunicante}

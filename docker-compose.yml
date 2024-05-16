@@ -1,0 +1,14 @@
+
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    depends_on:
+      - mongo-seed
+  mongo-seed:
+    image: mongo:latest
+    volumes:
+      - /home/ricardo/Desktop/Engenharia Web/teste_repository/ENGWEB2024-NORMAL-A100066/contratos2024.csv:/datasets/dataset.csv
+    command: mongoimport --host mongodb -d contratos -c contratos --type csv --file /datasets/dataset.csv --headerline
